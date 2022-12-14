@@ -43,7 +43,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: -200px;
+  margin-top: -50px;
+  
 }
 
 /************** LA NAVIGATION ***************/
@@ -82,7 +83,7 @@ nav ul li a:hover {
 #main section {
   /* CE QUE TOUTES CES SECTIONS AURONT EN COMMUN DANS MAIN*/
   margin-bottom: 20vh; /*espacement entre chaque section*/
-  padding-top: 80px; /*Je dois donner un padding-top pour que lorsqu'on pèsse sur le nav, ça nous amène à la bonne section, par dessus le titre*/
+  padding-top: 100px; /*Je dois donner un padding-top pour que lorsqu'on pèsse sur le nav, ça nous amène à la bonne section, par dessus le titre*/
 }
 
 #accueil {
@@ -105,8 +106,9 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column; /*je veux que le contenu soit en 2 colonnes*/
   flex-wrap: wrap; /* si je ne fais pas flex-wrap, cela fait une colonne. */
-  height: 300vh; /*si je ne donne pas de height, ça fait seulement une colonne. Selon le devis je dois en avoir 2. Je dois aussi mettre un énorme height, sinon ça fait trois colonnes et je ne veux pas ça*/
-  max-width: 35vw; /*pour que le contenu ne dépasse pas le contenu de la section précedente.*/
+  height: 230vh; /*si je ne donne pas de height, ça fait seulement une colonne. Selon le devis je dois en avoir 2. Je dois aussi mettre un énorme height, sinon ça fait trois colonnes et je ne veux pas ça*/
+  max-width: 28vw; /*pour que le contenu ne dépasse pas le contenu de la section précedente.*/
+  border: 1px solid salmon;
 }
 
 #videos {
@@ -212,7 +214,7 @@ h3:hover {
 }
 
 #videos p {
-  padding: 0 0 60px 15px;
+  padding: 0 0 0 15px;
 }
 
 /*** LE CONTENU DANS MES SECTIONS*****/
@@ -257,7 +259,7 @@ video {
   flex-direction: column; /*je veux le toute en 2 colonnes comme dans portfolio*/
   justify-content: space-around;
   flex-wrap: wrap; /*pour faire deux colonnes ça prend ceci*/
-  max-width: 35vw; /* si je ne donne pas de max width, ça ne se place pas comme je veux*/
+  max-width: 28vw; /* si je ne donne pas de max width, ça ne se place pas comme je veux*/
   height: 1400px; /*je dois donner un height, sinon ça ne marche pas comme je veux*/
 }
 
@@ -330,7 +332,7 @@ form {
 #info {
   display: flex;
   align-items: flex-end; /*je veux que ça soit aligné à droite, car centré, visuellemnt je n'aime pas ça.*/
-  padding-right: 7vw; /*en donnant ce padding, ça va se centrer un peu*/
+  padding-right: 80px; /*en donnant ce padding, ça va se centrer un peu*/
   flex-direction: column;
   padding-top: 20px;
   color: #0195d2;
