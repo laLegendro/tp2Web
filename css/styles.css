@@ -1,0 +1,401 @@
+*,
+h1,
+img {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  font-family: "oswald", serif; /*je veux que tout le texte courant soit avec cette police*/
+}
+
+/************** BALISES PRINCIPALES: HEADER, MAIN, FOOTER ***************/
+
+header {
+  font-family: "Roboto", sans-serif; /*police du web pour l'entête seulement */
+  color: #0195d2;
+  font-weight: bolder;
+  font-size: 120%;
+  display: flex;
+}
+
+#main {
+  /* margin: 0 auto; le site ne se place pas au centre... */
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-left: 30vw; /* ma solution pour centrer la page.... */
+  padding-top: 100px; /*vu que mon nav est fixed, si je ne donne pas de padding top, le nav cachera la partie haute de mon main*/
+}
+
+footer {
+  color: white;
+  background-color: black;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -200px;
+}
+
+/************** LA NAVIGATION ***************/
+
+nav {
+  background-color: black;
+  width: 100vw; /*toute la page*/
+  position: fixed; /*pour qu'il descend avec le scrolling*/
+  height: 10vh;
+  padding-top: 30px; /*pour que le nav ne colle pas complètement en haut*/
+  z-index: 100; /* un gros z-index, sinon le nav s'en va par dessous mes contrôles dans la séction vidéo*/
+}
+
+nav ul {
+  display: flex; /* ce sont les éléments dans nav ul qui seront en flex*/
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px 0 40px;
+  list-style-type: none; /*pour enlever la déco des ul */
+}
+
+nav ul li a {
+  transition: 0.5s all ease; /*ce sont les éléments dans li qui auront la transition*/
+  color: #0195d2;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ffa300;
+  cursor: pointer;
+  font-size: 140%;
+}
+
+/**************** BALISES SÉCONDRAIRES *****************/
+
+#main section {
+  /* CE QUE TOUTES CES SECTIONS AURONT EN COMMUN DANS MAIN*/
+  margin-bottom: 20vh; /*espacement entre chaque section*/
+  padding-top: 80px; /*Je dois donner un padding-top pour que lorsqu'on pèsse sur le nav, ça nous amène à la bonne section, par dessus le titre*/
+}
+
+#accueil {
+  /* width: 60vw; si je donne ce width, ça sort de mon main... */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#moi {
+  display: flex;
+  flex-direction: column; /*je veux que les paragraphes dans #moi soeint en colonne*/
+  justify-content: flex-start; /*placés au début à gauche*/
+  background-image: url("../images/arrierePlanQuiSuisJe.jpg");
+  background-repeat: no-repeat;
+  height: 528px; /*je dois donner une hauteur sinon l'image arriere plan ne s'affiche pas.*/
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column; /*je veux que le contenu soit en 2 colonnes*/
+  flex-wrap: wrap; /* si je ne fais pas flex-wrap, cela fait une colonne. */
+  height: 300vh; /*si je ne donne pas de height, ça fait seulement une colonne. Selon le devis je dois en avoir 2. Je dois aussi mettre un énorme height, sinon ça fait trois colonnes et je ne veux pas ça*/
+  max-width: 35vw; /*pour que le contenu ne dépasse pas le contenu de la section précedente.*/
+}
+
+#videos {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: -100px; /*Vu que la séction portfolio a besoin d'un gran height, ça laisse un grand espace entre portfolio et vidéos. Je dois alors mettre une margin négative pour compenser.*/
+}
+
+/************* TOUS MES TITRES *********************/
+
+h1,
+h2 {
+  /* informations partagées avec tous mes titres */
+  font-family: "kalam", cursive;
+  font-size: 260%;
+}
+
+h1:hover {
+  color: #ffa300;
+}
+
+#accueil h1 {
+  width: 250px; /*Si je ne donne pas de largeur le hover ne marche pas correctement!*/
+}
+
+#moi h1 {
+  width: 240px; /*vu que c'est adaptatif, si je donne plus gros, le hover nemarcher pas*/
+  padding-left: 10px; /* pour que le titre ne soit pas collé à l'image arrière plan*/
+}
+
+#portfolio h1 {
+  width: 160px; /*si je donne un width en % ou vw, le hover ne marche pas*/
+}
+
+#portfolio h1:hover {
+  color: #ffa300; /*drôlement, mon hover pour les h1 plus haut dans mon css, ne marche pas avec celui-ci... donc je dois le refaire*/
+}
+
+#videos h1 {
+  width: 200px; /*Si je ne donne pas une largeur, le hover ne marche pas comme il faut!*/
+}
+
+#monArt h1 {
+  width: 150px; /*Si je ne donne pas une largeur, le hover ne marche pas comme il faut!*/
+}
+
+#collaboration h1 {
+  width: 380px; /*largeur spécifique à ce H1, pour que le hover marche correctement*/
+}
+
+#contact h1 {
+  width: 150px; /*largeur spécifique à ce H1, pour que le hover marche correctement*/
+}
+
+/* MAINTENANT TOUS MES H2 ET MES H3 */
+
+h2 {
+  font-size: 200%;
+  padding: 0 0 20px 10px;
+  margin-top: 20px; /*pour décoller mon h1 de mon h2*/
+}
+
+h2:hover {
+  color: #0195d2;
+}
+
+h3 {
+  color: #0195d2;
+  padding-bottom: 10px;
+}
+
+h3:hover {
+  color: #ffa300; /*pour que mes h3 changent de couleur*/
+}
+
+/* TOUTES MES BALISES DE PARAGRAPHE*/
+
+#accueil p {
+  color: #0195d2;
+  font-family: "Roboto", sans-serif; /* Seulement dans accueil je vais utiliser Roboto*/
+  font-weight: 700;
+  font-size: 150%;
+  line-height: 180%;
+}
+
+#main #accueil p:nth-of-type(2),
+#main #accueil p:nth-of-type(4),
+#main #accueil p:nth-of-type(6) {
+  color: #ffa300;
+}
+
+#moi p {
+  color: white;
+  line-height: 120%;
+  padding: 10px 0 0 10px;
+  width: 17vw; /*approximatif pour que ça ne touche pas le visage de mon autoportrail*/
+  overflow: hidden; /*ainsi mon texte ne sort pas de sa séction*/
+}
+
+#portfolio p {
+  padding-bottom: 10px;
+}
+
+#videos p {
+  padding: 0 0 60px 15px;
+}
+
+/*** LE CONTENU DANS MES SECTIONS*****/
+
+/* PORTFOLIO */
+
+/*sur 2 colonnes. une qui va se justifier à droite et l'autre à gauche*/
+
+.gauche {
+  width: 202px;
+  justify-content: right; /* le contenu ne se place pas à droite... */
+  margin-right: 10px; /*quand l'écran est plus petit horizontellement, je ne veux pas que les 2 colonnes soient collées*/
+  padding-bottom: 10px;
+  text-align: right;
+}
+.droite {
+  width: 202px;
+  padding-bottom: 10px;
+  justify-content: left;
+}
+
+.gauche img,
+.droite img {
+  padding-bottom: 10px; /*pour donner un espacement*/
+  transition: 0.5s all ease;
+}
+
+#portfolio article img:hover {
+  transform: scale(2, 2);
+}
+
+/* VIDÉO */
+
+video {
+  padding-bottom: 10px;
+}
+
+/* MON ART */
+
+#monArt div {
+  display: flex;
+  flex-direction: column; /*je veux le toute en 2 colonnes comme dans portfolio*/
+  justify-content: space-around;
+  flex-wrap: wrap; /*pour faire deux colonnes ça prend ceci*/
+  max-width: 35vw; /* si je ne donne pas de max width, ça ne se place pas comme je veux*/
+  height: 1400px; /*je dois donner un height, sinon ça ne marche pas comme je veux*/
+}
+
+#monArt img {
+  padding-right: 10px;
+  transition: 0.5s all ease;
+}
+
+#monArt img:hover {
+  width: 300px;
+}
+
+/* COLLABORATION */
+
+table {
+  border: 1px solid white;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+caption {
+  padding: 20px 0 20px 0;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid white;
+}
+details {
+  font-weight: bolder;
+  color: #0195d2; /*je veux que le details soit bleu*/
+}
+
+summary {
+  color: white; /*si mon detail est bleu, je veux mon summary blanc*/
+  padding-bottom: 5px; /*pour donner un espace entre le summary et le details*/
+}
+
+th,
+td {
+  border: 1px solid white;
+  width: 80px;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.dispo {
+  background-color: #ffa300;
+  color: black;
+  font-family: "oswald", sans-serif;
+}
+
+.dernier {
+  font-size: 80%; /*plus petit pour que ça fitte sur une ligne*/
+  font-style: italic;
+  color: white;
+}
+
+th {
+  color: #0195d2;
+}
+
+/* CONTACT */
+
+form {
+  color: white;
+  width: 38vw; /*pour avoir environ la même largeur que le reste de mes sections*/
+  max-width: 400px; /* si je donne plus, ça dépasse la largeur du reste de mes sections lorsque 100vw*/
+  font-family: "oswald", serif;
+  margin-top: 20px; /*pour séparer le tout de mon h1*/
+}
+
+#info {
+  display: flex;
+  align-items: flex-end; /*je veux que ça soit aligné à droite, car centré, visuellemnt je n'aime pas ça.*/
+  padding-right: 7vw; /*en donnant ce padding, ça va se centrer un peu*/
+  flex-direction: column;
+  padding-top: 20px;
+  color: #0195d2;
+}
+
+#client,
+#jour,
+#boutons {
+  display: flex;
+  /*justify-content: flex-start; c'est quoi la différence entre justify content et align items?*/
+  align-items: center;
+  flex-direction: column;
+  color: #0195d2;
+}
+
+fieldset {
+  padding-bottom: 20px;
+}
+
+#client {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#jour {
+  margin-top: 20px;
+  align-items: flex-end;
+  padding-right: 120px;
+}
+
+#boutons input {
+  margin-top: 10px;
+  margin-bottom: 5px; /*séparation entre les boutons*/
+  font-family: "oswald", sans-serif;
+  color: white;
+  background-color: #0195d2;
+  padding: 5px 5px 5px 5px;
+}
+
+/* CONTENU FOOTER */
+
+footer dl {
+  padding: 0 20px 40px 40px; /*pour donner un espacement entre le bord du footer et son contenu*/
+  flex: 0 1 30%;
+}
+
+footer dl:last-of-type {
+  font-style: italic;
+}
+
+footer dl dt {
+  color: #0195d2;
+  padding-bottom: 10px; /*pour que les titres du footer ne soient pas collés au texte courant*/
+}
+
+footer dl dt:hover {
+  color: #ffa300;
+}
+
+footer dl dd i {
+  color: #ffa300;
+  font-size: 30px; /*font Awesome est considéré comme une police de caractère, donc pour les agrandir, il faut utiliser font size*/
+  padding-right: 5px; /* espace entre mes icons*/
+}
+
+footer dl dd i:hover {
+  cursor: pointer;
+}
