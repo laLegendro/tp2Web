@@ -108,7 +108,7 @@ nav ul li a:hover {
   flex-wrap: wrap; /* si je ne fais pas flex-wrap, cela fait une colonne. */
   height: 230vh; /*si je ne donne pas de height, ça fait seulement une colonne. Selon le devis je dois en avoir 2. Je dois aussi mettre un énorme height, sinon ça fait trois colonnes et je ne veux pas ça*/
   max-width: 28vw; /*pour que le contenu ne dépasse pas le contenu de la section précedente.*/
-  border: 1px solid salmon;
+  
 }
 
 #videos {
